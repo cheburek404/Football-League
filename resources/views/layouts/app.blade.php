@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/css/app.css'])
 </head>
 <body>
 
@@ -25,5 +25,7 @@
         @yield('content')
 
     </div>  
+
+    @vite(['resources/js/app.js'])
 </body>
 </html>

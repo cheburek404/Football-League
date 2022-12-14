@@ -7,20 +7,17 @@
         <div class="count">
             <div class="count__item">
                 <label for="">Количество событий</label>
-                <input type="text" class="form-control" name="count">
+                <input type="text" id="add_events" class="form-control" name="count">
             </div>
             <div class="count__item">
-                <button class="btn btn-success" style="margin-left: 5px">Добавить</button>
-            </div>
-            <div class="count__item">
-                <button class="btn btn-secondary" style="margin-left: 5px">Очистить все</button>
+                <button class="btn btn-success" onclick="addFields()" style="margin-left: 5px">Добавить</button>
             </div>
         </div><br>
             
         <form action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <div class="match" id="match">
+            <div class="match" id="match1">
                 <div class="match__item">
                     <label for="">Название первого клуба</label>
                     <select class="form-select" required>
@@ -31,12 +28,7 @@
                 </div>
                 <div class="match__item">
                     <label for="">Указать время</label>
-                    <select class="form-select">
-                        <option selected>16:00</option>
-                        <option value="1">17:00</option>
-                        <option value="2">18:00</option>
-                        <option value="3">19:00</option>
-                    </select>
+                    <input type="text" name="time" class="form-control">
                 </div>
                 <div class="match__item">
                     <label for="">Название второго клуба</label>
@@ -48,9 +40,37 @@
                 </div>
             </div><br>
 
+            <div id="match"></div>
+
             <button type="submit" class="btn btn-success mt-2">Сохранить</button>
             <a href="{{ route('showMatch') }}" class="btn btn-secondary mt-2">Назад</a>
         </form>
     </div>
 
+    <script>
+        function addFields(){
+            var number = document.getElementById("add_events").value;
+            var match = document.getElementById("match");
+
+            while (match.hasChildNodes()) {
+                match.removeChild(match.lastChild);
+            }
+
+            for (i=0;i<number;i++){
+                var select1 = document.createElement("select");
+                var select2 = document.createElement("select");
+                var input = document.createElement("input");
+                input.type = "text";
+                input.class = "form-control";
+                input.name = "event" + i;
+                select1.name = "event" + i;
+                select2.name = "event" + i;
+                match.appendChild(select1);
+                match.appendChild(input);
+                match.appendChild(select2);
+                match.appendChild(document.createElement("br"));
+            }
+        } 
+    </script>
 @endsection
+
