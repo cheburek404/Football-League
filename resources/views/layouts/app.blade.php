@@ -24,6 +24,10 @@
 
         @yield('content')
 
+        <div id="app">
+            <home></home>
+        </div>
+
     </div>  
 
     @vite(['resources/js/app.js'])
