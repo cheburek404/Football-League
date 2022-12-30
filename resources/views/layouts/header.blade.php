@@ -1,12 +1,16 @@
 <nav class="navbar sticky-top shadow-sm">
     <div class="container">
-        <a href="/"><img src="#" alt="">AQTFL</a>
+        <a href="/"><img src="/img/logo.png" class="logo"></a>
         
         <div class="nav">    
             @guest
                 <a href="#" class="nav-link">Матчи</a>
                 <a href="#" class="nav-link">Результаты</a>
                 <a href="#" class="nav-link">Новости</a>
+                <a href="#" class="nav-link">Бомбардиры</a>
+                <a href="#" class="nav-link">Фотогалерея</a>
+                <a href="#" class="nav-link">Нарушители</a>
+                <a href="#" class="nav-link">Регламент</a>
             @else
                 <a href="{{ route('admin') }}" class="nav-link">Клубы</a>
                 <a href="{{ route('showMatch') }}" class="nav-link">Матчи</a>

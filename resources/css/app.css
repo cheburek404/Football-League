@@ -1,40 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: white;
-}
-
-
 /* GLOBAL */
-a {
-    text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-.mtop {
+/* .mtop {
     margin-top: 40px;
-}
+} */
 
 
-/* CONTAINER */
-.container {
-    width: 100%;
-    max-width: 1200px;
-}
-
-
-/* NAV */
-.navbar {
-    width: 100%;
-    height: auto;
-}
 
  
 /* TABLE */

@@ -1,0 +1,129 @@
+$primary-color: #19283D;
+$font: 'Montserrat', sans-serif;
+
+
+/* GLOBAL */
+* {margin: 0;padding: 0;box-sizing: border-box;}
+a {text-decoration: none;}
+h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+
+/* BODY */
+body {
+    font-family: $font;
+    font-weight: 500;
+    color: #fff;
+    background-color: $primary-color;
+}
+
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+/* BUTTON */
+.btn {
+    background-color: #fff;
+    color: $primary-color;
+    font-weight: 700;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: color .1s linear;
+    transition: background-color .1s linear;
+
+    &:hover {background-color: #F05722;color: #fff;}
+}
+
+
+/* NAV */
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: #F05722;
+
+    .logo {
+        width: 50px;
+        height: 55px;
+    }
+
+    .nav-link {
+        color: #fff;
+        font-weight: 600;
+        transition: color .1s linear;
+
+        &:hover {color: $primary-color;}
+    }
+}
+
+
+/* HEADER */
+.header {
+    color: #fff;
+    text-align: center;
+    margin: 50px;
+
+    &__inner {
+        margin: auto;
+        width: 45%;
+
+        .header__title {
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        h6 {margin-bottom: 15px;}
+
+        /*.header__hr {
+
+            &:after {
+                content: "";
+                display: block;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                width: 25%;
+                height: 25%;
+            }
+        }*/
+    }
+    
+}
+
+
+/* MEMBER */
+.member {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* NEWS */
+.news {
+    text-align: center;
+
+    &__title {
+        font-weight: 600;
+        margin: 33px 0;
+    }
+
+    // Phone
+    .phone {
+        position: relative;
+        height: 360px;
+        margin: 90px 0 30px;
+        border-radius: 15px;
+        background: linear-gradient(265.99deg, #0B2B57 3.33%, #184F9A 93.3%);
+
+        &__img {
+            transform: translateY(-60px);
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+}
