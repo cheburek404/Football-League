@@ -4,14 +4,14 @@ import "../sass/app.scss"
 
 import { createApp } from 'vue';
 import Home from '../components/Home.vue';
-import Test from '../components/Test.vue';
+import Match from '../components/Match.vue';
 
 
 const app = createApp({});
 
 
 app.component('home', Home)
-    .component('test', Test);
+    .component('match', Match);
 
 
-app.mount("#app");
+app.mount("#app"); 

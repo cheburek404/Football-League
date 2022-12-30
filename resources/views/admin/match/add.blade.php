@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    
     <div class="card card--600">
         <h4>Добавить матчи</h4><br>
         <div class="count">
@@ -13,32 +12,11 @@
                 <button class="btn btn-success" onclick="addFields()" style="margin-left: 5px">Добавить</button>
             </div>
         </div><br>
-            
+
         <form action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <div class="match" id="match1">
-                <div class="match__item">
-                    <label for="">Название первого клуба</label>
-                    <select class="form-select" required>
-                        @foreach($clubs as $club)
-                        <option value="{{ $club->id }}">{{ $club->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="match__item">
-                    <label for="">Указать время</label>
-                    <input type="text" name="time" class="form-control">
-                </div>
-                <div class="match__item">
-                    <label for="">Название второго клуба</label>
-                    <select class="form-select" required>
-                        @foreach($clubs as $club)
-                        <option value="{{ $club->id }}">{{ $club->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div><br>
+            <match></match><br>
 
             <div id="match"></div>
 
@@ -48,7 +26,7 @@
     </div>
 
     <script>
-        function addFields(){
+        function addFields() {
             var number = document.getElementById("add_events").value;
             var match = document.getElementById("match");
 
@@ -56,7 +34,7 @@
                 match.removeChild(match.lastChild);
             }
 
-            for (i=0;i<number;i++){
+            for (i = 0; i < number; i++) {
                 var select1 = document.createElement("select");
                 var select2 = document.createElement("select");
                 var input = document.createElement("input");
@@ -70,7 +48,6 @@
                 match.appendChild(select2);
                 match.appendChild(document.createElement("br"));
             }
-        } 
+        }
     </script>
 @endsection
-
