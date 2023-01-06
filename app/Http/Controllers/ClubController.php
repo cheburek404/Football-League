@@ -12,7 +12,7 @@ class ClubController extends Controller {
     public function index() {
         return view('admin.club.add');
     }
-    
+
     public function save(Request $req) {
         $data = new Club();
 
@@ -27,5 +27,11 @@ class ClubController extends Controller {
         $data->save();
 
         return redirect()->route('admin');
+    }
+
+    public function getAll() {
+        $clubs = DB::table('clubs')->get();
+
+        return response($clubs);
     }
 }

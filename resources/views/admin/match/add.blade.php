@@ -3,17 +3,8 @@
 @section('content')
     <div class="card card--600">
         <h4>Добавить матчи</h4><br>
-        <div class="count">
-            <div class="count__item">
-                <label for="">Количество событий</label>
-                <input type="text" id="add_events" class="form-control" name="count">
-            </div>
-            <div class="count__item">
-                <button class="btn btn-success" onclick="addFields()" style="margin-left: 5px">Добавить</button>
-            </div>
-        </div><br>
 
-        <form action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
+        <form action="#" method="POST" enctype="multipart/form-data">
             @csrf
 
             <match></match><br>
@@ -25,7 +16,7 @@
         </form>
     </div>
 
-    <script>
+    {{-- <script>
         function addFields() {
             var number = document.getElementById("add_events").value;
             var match = document.getElementById("match");
@@ -49,5 +40,6 @@
                 match.appendChild(document.createElement("br"));
             }
         }
-    </script>
+    </script> --}}
+    {{-- <script></script> --}}
 @endsection
