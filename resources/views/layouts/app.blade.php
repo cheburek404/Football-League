@@ -18,17 +18,12 @@
 </head>
 <body>
 
-    @include('layouts.header')
-    
-    <div class="container">    
+    <div id="app">
+        @include('layouts.header')
 
         @yield('content')
-
-        <div id="app">
-            <test></test>
-        </div>
-
-    </div>  
+    </div>
+      
 
     @vite(['resources/js/app.js'])
 </body>
