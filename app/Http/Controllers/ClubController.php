@@ -28,4 +28,10 @@ class ClubController extends Controller {
 
         return redirect()->route('admin');
     }
+
+    public function getAll() {
+        $clubs = DB::table('clubs')->get();
+
+        return response($clubs);
+    }
 }
